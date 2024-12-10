@@ -4,10 +4,10 @@ WORKDIR /app
 
 COPY requirment.txt .
 
-RUN pip install --no-cache -dir -r requirment.txt
+RUN pip install --no-cache-dir -r requirment.txt
 
 COPY . .
 
 EXPOSE 7860
 
-CMD ["python" , "ui.py"]
+CMD ["python" , "-u" , "ui.py"]

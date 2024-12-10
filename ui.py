@@ -33,7 +33,10 @@ with gr.Blocks(title="Chat with GPT-4") as demo:
     submit_button.click(chat, inputs=[textbox, chatbox], outputs=[textbox, chatbox])
 
 # Launch the Gradio interface
-demo.launch()
+demo.launch(
+    server_name = "0.0.0.0",
+    server_port = 7860
+)
 
 
 # gr.ChatInterface (
@@ -42,3 +45,4 @@ demo.launch()
 # ).launch(
 #     share = True,
 # )
+
