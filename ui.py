@@ -38,7 +38,6 @@ demo.launch(
     server_port = 7860
 )
 
-
 # gr.ChatInterface (
 #     fn = chat,
 #     type = "messages"
