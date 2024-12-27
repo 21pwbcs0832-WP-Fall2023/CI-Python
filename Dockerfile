@@ -8,6 +8,6 @@ RUN pip install --no-cache-dir -r requirment.txt
 
 COPY . .
 
-EXPOSE 7860
+EXPOSE 8001
 
-CMD ["python" , "-u" , "ui.py"]
+CMD ["gunicorn" , "-c" , "config.py" ,  "main:app"]
