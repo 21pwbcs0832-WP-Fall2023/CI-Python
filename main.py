@@ -18,7 +18,7 @@ app.add_middleware(
     allow_headers=["*"],
 
     )
-@app.get('/ask')
+@app.post('/ask')
 def handle_question(input: QueryInput):
     try:
         if input.stream:
